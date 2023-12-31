@@ -1,0 +1,14 @@
+{
+  "en": {
+    "search": "search",
+    "categories": "categories",
+    "recent listings": "recent listings",
+    "popular cities": "popular cities"
+  },
+  "sv": {
+    "search": "sök",
+    "categories": "kategorier",
+    "recent listings": "senaste annonser",
+    "popular cities": "populära städer"
+  }
+}
