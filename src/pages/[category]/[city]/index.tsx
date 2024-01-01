@@ -144,8 +144,8 @@ export default function City({
       />
       <div className="grid gap-10">
         <div className={cn(open && "lg:grid lg:grid-cols-3 lg:gap-6")}>
-          <div className="flex flex-col gap-y-8">
-            <div className="flex flex-col gap-y-6">
+          <div className="grid gap-y-8">
+            <div className="grid gap-y-6">
               <Breadcrumbs navigation={navigation} />
               <H1 className="lg:text-4xl">{seo.city.h1}</H1>
               <Filter type_formatted={slug === "bostad" ? "alla" : slug} />
