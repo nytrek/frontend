@@ -140,21 +140,28 @@ export const SignUp: React.FC<{
                   enabled={enabled}
                   setEnabled={setEnabled}
                 ></Toggle.Body>
-                <Toggle.Label>
+                <span className="ml-3 text-sm">
                   <span className="font-medium text-gray-900">
                     Jag accepterar
                   </span>{" "}
-                  <a className="text-secondary underline" href="/villkor">
+                  <a
+                    className="text-secondary underline"
+                    href={
+                      locale === "en" ? "/terms-of-use" : "/anvandarvillkor"
+                    }
+                  >
                     Användarvillkoren
                   </a>{" "}
                   och{" "}
                   <a
                     className="text-secondary underline"
-                    href="/integritetspolicy"
+                    href={
+                      locale === "en" ? "/privacy-policy" : "/integritetspolicy"
+                    }
                   >
                     Integritetspolicyn
                   </a>
-                </Toggle.Label>
+                </span>
               </Toggle.Wrapper>
               <div className="sm:col-span-2">
                 <Button className="w-full" intent="primary">
