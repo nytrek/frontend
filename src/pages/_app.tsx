@@ -69,7 +69,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         }
       `}</style>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-K4WQECFV50"
+        src="https://www.googletagmanager.com/gtag/js?id=G-NEM0C7BL54"
         strategy="afterInteractive"
       ></Script>
       <Script id="google-analytics" strategy="afterInteractive">
@@ -82,7 +82,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             'analytics_storage': 'denied'
           });
 
-          gtag('config', 'G-K4WQECFV50');
+          gtag('config', 'G-NEM0C7BL54');
         `}
       </Script>
       <QueryClientProvider client={queryClient}>
