@@ -99,8 +99,8 @@ export const Listing: React.FC<{ listing: ListingType }> = ({ listing }) => {
                     loading: "Laddar...",
                     success: (data) =>
                       data
-                        ? "Din like har registrerats"
-                        : "Din like har tagits bort från annonsen",
+                        ? "Annonsen har sparats i dina favoriter"
+                        : "Annonsen har tagits bort från dina favoriter",
                     error: (err) => err.message,
                   })
                 : setOpen(true)
