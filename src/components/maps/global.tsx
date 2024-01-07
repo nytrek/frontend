@@ -80,8 +80,8 @@ export const Map: React.FC<
       <Drawer.Root onOpenChange={setOpen} open={open}>
         <Drawer.Portal>
           <Drawer.Overlay className="fixed inset-0 z-40 bg-black/40" />
-          <Drawer.Content className="fixed bottom-0 left-0 right-0 z-40 mt-24 flex flex-col rounded-t-[10px] bg-gray-100 outline-none">
-            <div className="max-h-full flex-1 overflow-y-auto rounded-t-[10px] bg-white px-4 pb-12 pt-4">
+          <Drawer.Content className="fixed bottom-0 left-0 right-0 z-40 mt-24 flex max-h-96 flex-col rounded-t-[10px] bg-gray-100 outline-none">
+            <div className="flex-1 overflow-y-auto rounded-t-[10px] bg-white px-4 pb-12 pt-4">
               <div className="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-gray-300" />
               {!!data && (
                 <div className="grid gap-10">
