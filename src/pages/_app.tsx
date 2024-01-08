@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { enUS, svSE } from "@clerk/localizations";
 import { ClerkProvider } from "@clerk/nextjs";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";
@@ -97,7 +98,10 @@ export default function App({ Component, pageProps, router }: AppProps) {
         `}
       </Script>
       <QueryClientProvider client={queryClient}>
-        <ClerkProvider {...pageProps}>
+        <ClerkProvider
+          {...pageProps}
+          localization={router.locale === "en" ? enUS : svSE}
+        >
           <div className="flex flex-col p-6 lg:py-12">
             <Header router={router} />
             <Layout router={router}>

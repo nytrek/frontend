@@ -41,52 +41,46 @@ export default function Saved() {
       <Head>
         <meta content="noindex,nofollow" name="robots" />
       </Head>
-      {isLoaded && (
-        <div className="flex flex-col gap-6 lg:flex-row lg:gap-16">
-          <Sidenav />
-          <div className="flex flex-col gap-y-10">
-            <div>
-              <H2>
-                {translation[locale as keyof typeof translation][
+      <div className="flex flex-col gap-6 lg:flex-row lg:gap-16">
+        <Sidenav />
+        <div className="flex flex-col gap-y-10">
+          <div>
+            <H2>
+              {translation[locale as keyof typeof translation][
+                "saved listings"
+              ][0].toUpperCase() +
+                translation[locale as keyof typeof translation][
                   "saved listings"
-                ][0].toUpperCase() +
-                  translation[locale as keyof typeof translation][
-                    "saved listings"
-                  ].slice(1)}
-              </H2>
-              <P>
-                {translation[locale as keyof typeof translation][
+                ].slice(1)}
+            </H2>
+            <P>
+              {translation[locale as keyof typeof translation][
+                "description"
+              ][0].toUpperCase() +
+                translation[locale as keyof typeof translation][
                   "description"
-                ][0].toUpperCase() +
-                  translation[locale as keyof typeof translation][
-                    "description"
-                  ].slice(1)}
-              </P>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {data ? (
-                <>
-                  {data?.map((item) => (
-                    <Card.Body className="w-full" key={item._id}>
-                      {isLoading ? (
-                        <Card.Skeleton />
-                      ) : (
-                        <Listing listing={item} />
-                      )}
-                    </Card.Body>
-                  ))}
-                </>
-              ) : (
-                <>
-                  {Array.from({ length: 8 }).map((_, index) => (
-                    <Card.Skeleton key={index} />
-                  ))}
-                </>
-              )}
-            </div>
+                ].slice(1)}
+            </P>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {data ? (
+              <>
+                {data?.map((item) => (
+                  <Card.Body className="w-full" key={item._id}>
+                    {isLoading ? <Card.Skeleton /> : <Listing listing={item} />}
+                  </Card.Body>
+                ))}
+              </>
+            ) : (
+              <>
+                {Array.from({ length: 8 }).map((_, index) => (
+                  <Card.Skeleton key={index} />
+                ))}
+              </>
+            )}
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }

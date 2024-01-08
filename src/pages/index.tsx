@@ -74,6 +74,19 @@ export const Search: React.FC<
           : `/hyra-bostad/${city_formatted}`;
     }, 300);
   };
+  /**
+   * @description one-time fix to get long lived jwt token for testing
+   */
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     const token = async () => {
+  //       console.log(
+  //         await window.Clerk?.session.getToken({ template: "Frontend" }),
+  //       );
+  //     };
+  //     token();
+  //   }
+  // }, []);
   return (
     <form onSubmit={handleOnSubmit}>
       <div className="group relative z-10 mx-auto -mt-[4.5rem] max-w-5xl rounded-full shadow-xl">

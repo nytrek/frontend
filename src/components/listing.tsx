@@ -92,6 +92,7 @@ export const Listing: React.FC<{ listing: ListingType }> = ({ listing }) => {
         <Card.Content className="bottom-28 top-auto z-20 ml-auto h-auto w-fit justify-end p-0">
           <Button
             className="flex h-auto w-auto bg-transparent ring-0 hover:bg-transparent"
+            data-testid="like"
             intent="secondary"
             onClick={() =>
               user

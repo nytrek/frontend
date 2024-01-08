@@ -106,29 +106,27 @@ export default function Index() {
       <Head>
         <meta content="noindex,nofollow" name="robots" />
       </Head>
-      {isLoaded && (
-        <div className="flex flex-col gap-6 lg:flex-row lg:gap-16">
-          <Sidenav />
-          <div>
-            <H2>
-              {translation[locale as keyof typeof translation][
+      <div className="flex flex-col gap-6 lg:flex-row lg:gap-16">
+        <Sidenav />
+        <div>
+          <H2>
+            {translation[locale as keyof typeof translation][
+              "my listings"
+            ][0].toUpperCase() +
+              translation[locale as keyof typeof translation][
                 "my listings"
-              ][0].toUpperCase() +
-                translation[locale as keyof typeof translation][
-                  "my listings"
-                ].slice(1)}
-            </H2>
-            <P>
-              {translation[locale as keyof typeof translation][
+              ].slice(1)}
+          </H2>
+          <P>
+            {translation[locale as keyof typeof translation][
+              "description"
+            ][0].toUpperCase() +
+              translation[locale as keyof typeof translation][
                 "description"
-              ][0].toUpperCase() +
-                translation[locale as keyof typeof translation][
-                  "description"
-                ].slice(1)}
-            </P>
-          </div>
+              ].slice(1)}
+          </P>
         </div>
-      )}
+      </div>
     </>
   );
 }
