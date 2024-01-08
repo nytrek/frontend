@@ -30,7 +30,7 @@ Frontend repo. Built using Next.JS, React, TypeScript and Tailwind CSS
 
 # [Discord log](https://discord.com/channels/856971667393609759/1021521740800733244/threads/1156321072208167023)
 - OP: How do I create a test user that has a JWT token that does not expire? Or expires in a long time?
-- You want to create a templates in Clerk Dashboard -> JWT Templates and create a long lived templated. Then log into your frontend app and open a console. If there type await window.Clerk.session.getToken({ template: "<name>" }) to grab that token. Save that for your tests.
+- You want to create a templates in Clerk Dashboard -> JWT Templates and create a long lived templated. Then log into your frontend app and open a console. If there type `await window.Clerk.session.getToken({ template: "<name>" })` to grab that token. Save that for your tests.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
