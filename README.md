@@ -1,3 +1,5 @@
+![preview](./public/preview.png)
+
 Frontend repo. Built using Next.JS, React, TypeScript and Tailwind CSS
 
 # Features
